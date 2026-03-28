@@ -6,7 +6,7 @@ import numpy as np
 import joblib
 
 # ── 1. Model & Features Configuration ──────────────────────────────────────────
-MODEL_PATH = 'best_model.pkl'
+MODEL_PATH = 'models/best_model.pkl'
 
 FEATURE_COLS = [
     'PM2.5', 'NO2', 'year', 'month', 'day', 'day_of_week', 
@@ -57,7 +57,7 @@ if __name__ == '__main__':
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='AQI Hackathon Inference Script')
     parser.add_argument('--input', type=str, required=True, help='Path to input CSV (e.g., test.csv)')
-    parser.add_argument('--output', type=str, default='predictions.csv', help='Path to save output CSV')
+    parser.add_argument('--output', type=str, default='output/predictions.csv', help='Path to save output CSV')
     args = parser.parse_args()
 
     # 1. Load Data
