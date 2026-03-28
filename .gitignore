@@ -1,13 +1,25 @@
-# Ignore raw data
+# Data files — download separately via Kaggle
 data/
 
-# Ignore generated outputs and predictions
-output/*.csv
+# Output folder — generated at runtime
+output/
 
-# Ignore Python cache files
+# Python
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+.env
+venv/
+.venv/
+env/
 
-# Ignore Jupyter Notebook checkpoints
+# Jupyter
 .ipynb_checkpoints/
-notebooks/.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
