@@ -1,4 +1,4 @@
-# 🌫️ AQI Prediction Model
+# 🌫️ AQI Category Prediction
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python&logoColor=white)
 ![LightGBM](https://img.shields.io/badge/Model-LightGBM-brightgreen)
@@ -175,8 +175,8 @@ The test set spans Jan–Jul 2020. India's national lockdown began **March 24, 2
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/aqi-prediction.git
-cd aqi-prediction
+git clone https://github.com/Harshit-Patle/AQI-Prediction-Model.git
+cd AQI-Prediction-Model
 ```
 
 **2. Create a virtual environment (recommended)**
