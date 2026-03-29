@@ -140,15 +140,16 @@ Missing PM2.5 and NO2 values are imputed with global training medians (`45.0` an
 
 ### Model Selection
 
-Three classifiers were benchmarked using **5-fold Stratified Cross-Validation**. **Macro F1** was chosen as the metric because the dataset is heavily imbalanced — *Poor* accounts for ~46% of samples while *Very Poor* is only ~2.7%. Accuracy would be misleading; Macro F1 weights all 6 classes equally.
+Four classifiers were benchmarked using **5-fold Stratified Cross-Validation**. **Macro F1** was chosen as the metric because the dataset is heavily imbalanced — *Poor* accounts for ~46% of samples while *Very Poor* is only ~2.7%. Accuracy would be misleading; Macro F1 weights all 6 classes equally.
 
 | Model | CV Macro F1 |
 |---|---|
 | Logistic Regression | 0.5042 |
+| XGBoost | 0.6249 |
 | Random Forest | 0.6362 |
 | **LightGBM ✅** | **0.6399** |
 
-**LightGBM** was selected as the final model. It handles class imbalance natively via `class_weight='balanced'`, captures non-linear pollutant boundaries efficiently, and trains in seconds on 17K rows.
+**LightGBM** was selected as the final model. It handles class imbalance natively via `class_weight='balanced'`, captures non-linear pollutant boundaries efficiently, trains in seconds on 17K rows, and slightly edged out XGBoost in validation performance.
 
 ### Interesting Finding — COVID-19 Lockdown Signal
 
@@ -259,4 +260,4 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 ---
 
-<p align="center">Made with ☕ and too much curiosity about Indian air quality data</p>
+<p align="center">Made with ❤️ and too much curiosity about Indian air quality data by <strong>Harshit Patle</strong></p>
